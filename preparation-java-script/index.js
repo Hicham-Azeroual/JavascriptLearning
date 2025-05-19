@@ -127,3 +127,18 @@ taches.forEach(function(tache, i) {
 // Tâche 2 : coder
 // Tâche 3 : déboguer
 // Tâche 4 : déployer
+
+// oop the this keyword
+// this is a reference to the object that is calling the function
+console.log(this); // Affiche : Window
+function sayHello() {
+  console.log("Hello, " + this.name);
+}
+sayHello()
+
+const obj={
+  name:"hicham",
+  sayHello:function(){
+    console.log("Hello, " + this.name);
+  }
+}
