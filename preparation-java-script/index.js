@@ -142,3 +142,4 @@ const obj={
     console.log("Hello, " + this.name);
   }
 }
+obj.sayHello();

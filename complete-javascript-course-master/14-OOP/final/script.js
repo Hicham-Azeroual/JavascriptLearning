@@ -680,3 +680,13 @@ rivian
 
 console.log(rivian.speedUS);
 */
+
+
+// Constructor Functions and Classes
+
+// Constructor function
+const Person = function (firstName, birthYear) {
+  this.firstName = firstName;
+  this.birthYear = birthYear;
+  
+}
