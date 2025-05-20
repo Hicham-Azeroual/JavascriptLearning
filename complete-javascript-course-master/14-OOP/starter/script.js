@@ -200,3 +200,39 @@ class Student extends PersonCl {
     }
 }
 
+// Encapsulation :Private class filed and methods
+class Account {
+    // 1. Public fields (instances)
+    locale = navigator.language;
+
+    // 2. Private fields (instances)
+    #movements = [];
+    #pin;
+    
+    constructor(owner, currency, pin) {
+        this.owner = owner;
+        this.currency = currency;
+        this.#pin = pin;
+
+        // this movements is now protected
+        // this.#movements = [];
+        // this.locale = navigator.language;
+
+        console.log(`Thanks for opening an account, ${owner}`);
+    }
+
+    // public methods (interface ) Api
+    getMovements() {
+        return this.#movements;
+
+    }
+    deposit(val) {
+        this.#movements.push(val);
+        return this;
+    }
+    withdraw(val) {
+        this.deposit(-val);
+        return this;
+    }
+
+}
